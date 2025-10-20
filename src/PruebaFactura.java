@@ -1,3 +1,4 @@
+import javax.swing.*;
 import java.util.Scanner;
 
 public class PruebaFactura {
@@ -8,15 +9,11 @@ public class PruebaFactura {
         /**Declaración de variables*/
         double precioTotal;
         /**Desarrollo de la aplicación*/
-        System.out.println("\tSimulador de facturas");
-        System.out.println("Ingrese el número de la pieza");
-        producto1.setnPieza(entry.nextLine());
-        System.out.println("Ingrese una breve descripción de la pieza");
-        producto1.setDescripcion(entry.nextLine());
-        System.out.println("Ingrese la cantidad del producto");
-        producto1.setCantidad(Integer.parseInt(entry.nextLine()));
-        System.out.println("Ingrese el precio del producto");
-        producto1.setPrecioArticulo(Double.parseDouble(entry.nextLine()));
+        JOptionPane.showMessageDialog(null, "\tSimulador de facturas");
+        producto1.setnPieza(JOptionPane.showInputDialog(null, "Ingrese el número de la pieza"));
+        producto1.setDescripcion(JOptionPane.showInputDialog(null, "Ingrese una breve descripción de la pieza"));
+        producto1.setCantidad(Integer.parseInt(JOptionPane.showInputDialog(null, "Ingrese la cantidad del producto")));
+        producto1.setPrecioArticulo(Double.parseDouble(JOptionPane.showInputDialog(null, "Ingrese el precio del producto")));
         //Cálculos para obtener el monto de la factura
         precioTotal = producto1.obtenerMontoFactura();
         producto1.mensaje(precioTotal);

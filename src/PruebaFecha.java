@@ -1,3 +1,4 @@
+import javax.swing.*;
 import java.util.Scanner;
 
 public class PruebaFecha {
@@ -6,13 +7,10 @@ public class PruebaFecha {
         Fecha fecha1 = new Fecha(10,24, 2009);
         Scanner entry = new Scanner(System.in);
         /**Desarrollo de la aplicación*/
-        System.out.println("\tSimulador de fecha"); //Presentación del simulador
-        System.out.println("Ingrese el mes en el que estamos");
-        fecha1.setMes(Integer.parseInt(entry.nextLine()));
-        System.out.println("Ingrese el día en el que estamos");
-        fecha1.setDia(Integer.parseInt(entry.nextLine()));
-        System.out.println("Ingrese el año en el que estamos");
-        fecha1.setAnio(Integer.parseInt(entry.nextLine()));
+        JOptionPane.showMessageDialog(null, "\tSimulador de fecha"); //Presentación del simulador
+        fecha1.setMes(Integer.parseInt(JOptionPane.showInputDialog(null, "Ingrese el mes en el que estamos")));
+        fecha1.setDia(Integer.parseInt(JOptionPane.showInputDialog(null, "Ingrese el día en el que estamos")));
+        fecha1.setAnio(Integer.parseInt(JOptionPane.showInputDialog(null, "Ingrese el año en el que estamos")));
         /**Despliegue de fecha*/
         fecha1.mostrarFecha();
 

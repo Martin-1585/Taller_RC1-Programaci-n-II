@@ -10,8 +10,7 @@ public class PruebaFrecuencia {
         /**Variables*/
         int edad, frecuenciaMax;
         double frecuenciaEsperada;
-        /**Desarrollo de la aplicación de JAVA
-         * Ingreso de datos del usuario*/
+        /**Desarrollo de la aplicación de JAVA, ingreso de datos del usuario*/
         System.out.println("\tSimulador de calculadora de frecuencia cardíaca");
         System.out.println("Ingrese la información del paciente:");
         System.out.println("Nombre: ");
@@ -29,5 +28,6 @@ public class PruebaFrecuencia {
         frecuenciaMax = paciente1.frecuenciaMax(edad);
         frecuenciaEsperada = paciente1.frecuenciaEsperada(frecuenciaMax);
         paciente1.informacionPaciente(edad,frecuenciaMax,frecuenciaEsperada);
+        //La ventana emergente emerge de manera indirecta en la pantalla, se debe presionar alt + tab
     }
 }

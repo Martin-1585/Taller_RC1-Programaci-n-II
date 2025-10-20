@@ -1,3 +1,4 @@
+import javax.swing.*;
 import java.util.Scanner;
 public class PruebaEmpleado {
     public static void main(String[] args) {
@@ -9,14 +10,11 @@ public class PruebaEmpleado {
         double salarioAnual, salarioTotal;
         boolean allow = false;
         /**Desarrollo de la aplicación*/
-        System.out.println("\tSimulador de salario empleados");
-        System.out.println("Ingrese el nombre del empleado 1");
-        empleado1.setNombre(entry.nextLine());
-        System.out.println("Ingrese el apellido paterno del empleado 1");
-        empleado1.setApellidoPaterno(entry.nextLine());
+        JOptionPane.showMessageDialog(null, "\tSimulador de salario empleados");
+        empleado1.setNombre(JOptionPane.showInputDialog(null, "Ingrese el nombre del empleado 1"));
+        empleado1.setApellidoPaterno(JOptionPane.showInputDialog(null, "Ingrese el apellido paterno del empleado 1"));
         do{
-            System.out.println("Ingrese el salario mensual del empleado 1");
-            empleado1.setSalario(Double.parseDouble(entry.nextLine()));
+            empleado1.setSalario(Double.parseDouble(JOptionPane.showInputDialog(null, "Ingrese el salario mensual del empleado 1")));
             allow = empleado1.ValorPermitido();
         } while(!allow);
         /**Presentación de los cálculos del empleado 1*/
@@ -26,13 +24,10 @@ public class PruebaEmpleado {
         empleado1.mensajeAumento(salarioAnual,salarioTotal);
 
         /**Información del 2do objeto*/
-        System.out.println("Ingrese el nombre del empleado 2");
-        empleado2.setNombre(entry.nextLine());
-        System.out.println("Ingrese el apellido paterno del empleado 2");
-        empleado2.setApellidoPaterno(entry.nextLine());
+        empleado2.setNombre(JOptionPane.showInputDialog(null, "Ingrese el nombre del empleado 2"));
+        empleado2.setApellidoPaterno(JOptionPane.showInputDialog(null, "Ingrese el apellido paterno del empleado 2"));
         do{
-            System.out.println("Ingrese el salario mensual del empleado 2");
-            empleado2.setSalario(Double.parseDouble(entry.nextLine()));
+            empleado2.setSalario(Double.parseDouble(JOptionPane.showInputDialog(null, "Ingrese el salario mensual del empleado 2")));
             allow = empleado2.ValorPermitido();
         } while(!allow);
         /**Presentación de cálculos del empleado 2*/

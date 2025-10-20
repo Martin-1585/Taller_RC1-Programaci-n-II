@@ -43,7 +43,7 @@ public class Empleado {
     public Boolean ValorPermitido(){
         boolean allow;
         if (this.getSalario() < 0){
-            System.out.println("Valor no permitido, ingrese nuevamente");
+            JOptionPane.showMessageDialog(null , "Valor no permitido, ingrese nuevamente");
             allow = false;
         } else {
             allow = true;
