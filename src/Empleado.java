@@ -37,12 +37,20 @@ public class Empleado {
     }
 
     public void setSalario(double salario) {
-        if(salario < 0){
-            salario = 0;
-        }
         this.salario = salario;
     }
     /**Métodos propios del programador*/
+    public Boolean ValorPermitido(){
+        boolean allow;
+        if (this.getSalario() < 0){
+            System.out.println("Valor no permitido, ingrese nuevamente");
+            allow = false;
+        } else {
+            allow = true;
+        }
+        return allow;
+    }
+
     public Double salarioAnual(){
         double salarioAnual;
         salarioAnual = this.getSalario() * 12;
